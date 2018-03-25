@@ -1,9 +1,9 @@
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 #font-override {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 #portrait {
@@ -13,12 +13,12 @@ body {
 }
 
 #center-align {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   text-align: center;
 }
 
 #bio-text {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   text-align: center;
   font-size: large;
 }

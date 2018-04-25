@@ -11,7 +11,7 @@ class Header extends Component {
                 <a className="mdl-navigation__link" href="">Home</a>
                 <a className="mdl-navigation__link" href="">Professional</a>
                 <a className="mdl-navigation__link" href="">Personal</a>
-                <a className="mdl-navigation__link" href="">Resume</a>
+                <a className="mdl-navigation__link" href="https://goo.gl/EgC5WC">Resume</a>
             </nav>
             </div>
         </header>

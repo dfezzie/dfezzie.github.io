@@ -39,6 +39,7 @@ def display_public_key(private_key):
     print(decode(public_bytes))
 
 def add_key_to_ssh_agent(private_key_path):
+    # TODO: Debug why this is not actually working in the script. Needs to be run manually right now
     os.system('eval "$(ssh-agent -s)"')
     time.sleep(1)
     os.system('ssh-add ' + private_key_path)
@@ -48,17 +49,13 @@ def main():
     # Check for existing script SSH key default SSH folder
     with os.scandir(DEFAULT_KEY_DIRECTORY_PATH) as sshDir:
         keyMatches = list(filter(lambda itr: PRIVATE_KEY_NAME in itr.path, sshDir))
-    if keyMatches:
+    if not keyMatches:
         # TODO: Add logic to present an option for displaying the existing key
-        print('Keys found, exiting.')
-        exit()
-
-    private_key = generate_ssh_private_key()
-    write_ssh_key_pair(private_key)
+        print('Keys not found, generating...')
+        private_key = generate_ssh_private_key()
+        write_ssh_key_pair(private_key)
+        display_public_key(private_key)
     add_key_to_ssh_agent(PRIVATE_KEY_PATH)
-    display_public_key(private_key)
-    
-    
 
 main()
 
